@@ -1,1 +1,80 @@
 
+
+body{
+    font-family: 'Segoe UI', Tahoma, Geneva, Verdana, sans-serif;
+    text-align: center;
+    margin: 20px;
+}
+
+#gallery-container{
+    display: grid;
+    margin: 20px auto;
+    max-width: 600px;
+    padding: 20px;
+    grid-template-areas: 
+    "title"
+    "image"
+    "caption"
+    "btn-prev"
+    "btn-pause"
+    "btn-next";
+}
+
+h1{
+    grid-area: title;
+    margin: 0;
+}
+
+#gallery-img{
+    grid-area: image;
+    max-width: 100%;
+    height: auto;
+    border:  1px solid black;
+    border-radius: 4px;
+    justify-content: center;
+    gap: 15px;
+}
+
+#gallery-caption{
+    grid-area: caption;
+    margin: 0;
+    font-size: 18px;
+}
+
+#prev-btn{
+    grid-area: btn-prev;
+}
+
+#pause-btn{
+    grid-area: btn-pause;
+}
+
+#next-btn{
+    grid-area: btn-next;
+}
+
+button{
+    padding: 10px 20px;
+    margin: 5px;
+    font-size: 16px;
+    cursor: pointer;
+    background-color: lightseagreen;
+    border: none;
+    border-radius: 4px;
+}
+
+button:hover{
+    background-color: teal;
+}
+
+@media (min-width = 600px) {
+    #gallery-container{
+        grid-template-columns: repeat(3, 1fr);
+        grid-template-areas:
+    "title title title"  
+    "image image image"  
+    "caption caption caption"  
+    "btn-prev btn-pause btn-next";
+    }
+    
+}
